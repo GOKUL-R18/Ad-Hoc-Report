@@ -48,6 +48,61 @@ Through this project, the following MySQL concepts and tools were reinforced:
 
 ---
 
+## **Database Tables Overview**
+
+<details>
+<summary>Click to expand</summary>
+
+The `atliq_hardware_db` database comprises the following key tables:
+
+### **1. `dim_customer`**
+Contains customer-related data, including:
+- **customer_code**: Unique customer identifier.
+- **customer**: Customer name.
+- **platform**: Sales channel (e.g., "E-Commerce", "Brick & Mortar").
+- **channel**: Retail, Direct, or Distributor sales channels.
+- **market**: Customer's country.
+- **region**: Geographic region (APAC, EU, NA, LATAM).
+- **sub_zone**: Further breakdown of regions (India, ANZ, SE, etc.).
+
+### **2. `dim_product`**
+Contains product-related data, including:
+- **product_code**: Unique product identifier.
+- **division**: Product group (P&A, N&S, PC).
+- **segment**: Further breakdown of product types (e.g., Notebook, Desktop).
+- **product**: Product name.
+- **variant**: Product version (e.g., Standard, Plus, Premium).
+
+### **3. `fact_gross_price`**
+Stores gross pricing details:
+- **product_code**: Unique product identifier.
+- **fiscal_year**: Fiscal year the product was sold.
+- **gross_price**: Original selling price before deductions.
+
+### **4. `fact_manufacturing_cost`**
+Contains manufacturing cost data:
+- **product_code**: Unique product identifier.
+- **cost_year**: Year the product was manufactured.
+- **manufacturing_cost**: Total cost to manufacture the product.
+
+### **5. `fact_pre_invoice_deductions`**
+Tracks pre-invoice deduction data:
+- **customer_code**: Unique customer identifier.
+- **fiscal_year**: Year of sale.
+- **pre_invoice_discount_pct**: Pre-invoice discount percentage.
+
+### **6. `fact_sales_monthly`**
+Contains monthly sales data:
+- **date**: Date of sale (monthly format for FY2020-2021).
+- **product_code**: Unique product identifier.
+- **customer_code**: Unique customer identifier.
+- **sold_quantity**: Units sold.
+- **fiscal_year**: Year of sale.
+
+</details>
+
+---
+
 ## **Project Insights**
 
 ### **1. Product Diversity Trends**
@@ -67,6 +122,9 @@ Through this project, the following MySQL concepts and tools were reinforced:
 ---
 
 ## **Ad-Hoc SQL Insights**
+
+<details>
+<summary>Click to expand</summary>
 
 This section showcases various ad-hoc requests from AtliQ Hardware's management and the insights derived from MySQL queries.
 
@@ -139,6 +197,8 @@ This section showcases various ad-hoc requests from AtliQ Hardware's management 
     - 1st: AQ Digit (26,012 units sold)  
     - 2nd: AQ Velocity (25,978 units sold)  
     - 3rd: AQ Aspiron (25,963 units sold)
+
+</details>
 
 ---
 

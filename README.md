@@ -202,6 +202,25 @@ This section showcases various ad-hoc requests from AtliQ Hardware's management 
 
 ---
 
+## Strategic Insights
+
+### 1. Product Expansion
+The **36.33% growth in unique products**, led by the **Accessories** segment, highlights strong product diversification. Expanding in high-demand categories can drive **future revenue growth**.
+
+### 2. Geographical Focus
+**"Atliq Exclusive"** operates across key APAC markets. Focusing on **India**, **Japan**, and **Australia** can further capitalize on **regional growth opportunities**.
+
+### 3. Retail Channel Dominance
+With **73% of gross sales** coming from **retailers**, strengthening these partnerships is essential, especially in regions where retail is a primary sales driver.
+
+### 4. Competitive Discounts
+Offering **competitive discounts** to top Indian customers like **Flipkart** and **Amazon** has secured strong sales, especially in **e-commerce** markets.
+
+### 5. Profitable Accessories
+Focusing on **low-cost, high-volume products** like the **AQ Master Wired x1 Ms** (manufacturing cost: **$0.89**) can significantly **improve margins**.
+
+---
+
 ## **Conclusion**
 
 This project provided critical insights into **product performance**, **customer behavior**, and **sales trends** for AtliQ Hardware. By leveraging **MySQL** for ad-hoc analysis and using **Excel** for visualization, the analysis enabled the management to make informed, data-driven decisions.

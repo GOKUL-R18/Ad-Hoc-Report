@@ -15,6 +15,23 @@ AtliQ Hardware, a leading computer hardware producer in India, has expanded glob
 
 ---
 
+## **Key Learnings**
+
+Through this project, the following MySQL concepts and tools were reinforced:
+
+- **Joins**
+- **CTEs (Common Table Expressions)**
+- **Subqueries**
+- **Window Functions**
+- **String, Numeric, and Date Functions**
+- **Views**
+- **Stored Procedures**
+- **User-Defined Functions (UDFs)**
+- **Temporary Tables**
+- **Entity-Relationship Diagram (ERD)**
+
+---
+
 ## **Project Execution**
 
 1. **Data Import**: CSV files were imported into the MySQL database.
@@ -28,17 +45,6 @@ AtliQ Hardware, a leading computer hardware producer in India, has expanded glob
 
 - **MySQL** for database management and querying.
 - **Microsoft Excel** for visualization of insights.
-
----
-
-## **Key Learnings**
-
-Through this project, the following MySQL concepts were reinforced:
-- **Joins**
-- **CTEs (Common Table Expressions)**
-- **Subqueries**
-- **Window Functions**
-- **String, Numeric, and Date Functions**
 
 ---
 
@@ -60,7 +66,8 @@ Through this project, the following MySQL concepts were reinforced:
 
 ---
 
-## **Ad-Hoc SQL Insights**  
+## **Ad-Hoc SQL Insights**
+
 This section showcases various ad-hoc requests from AtliQ Hardware's management and the insights derived from MySQL queries.
 
 ### **Request 1**:  
@@ -89,8 +96,8 @@ This section showcases various ad-hoc requests from AtliQ Hardware's management 
 ### **Request 5**:  
 **Highest and lowest manufacturing costs by product?**  
 - **Result**:  
-  - Highest: **Q HOME Allin1 Gen 2** (Desktop segment) at **$240.54**  
-  - Lowest: **AQ Master Wired x1 Ms** (Accessories segment) at **$0.89**
+  - **Highest**: **Q HOME Allin1 Gen 2** (Desktop segment) at **$240.54**  
+  - **Lowest**: **AQ Master Wired x1 Ms** (Accessories segment) at **$0.89**
 
 ### **Request 6**:  
 **Top 5 customers who received the highest average pre-invoice discounts in FY2021 (Indian market)?**  
@@ -122,66 +129,16 @@ This section showcases various ad-hoc requests from AtliQ Hardware's management 
     - 1st: AQ Pen Drive 2 IN 1 (1,159,222 units sold)  
     - 2nd: AQ Pen Drive DRC (1,128,104 units sold)  
     - 3rd: AQ Clx1 (729,696 units sold)  
-
+  
   - **P&A Division**:  
     - 1st: AQ Gamers Ms (683,634 units sold)  
     - 2nd: AQ Master Wireless x1 Ms (682,321 units sold)  
     - 3rd: AQ Gamers Ms (681,531 units sold)  
-
+  
   - **PC Division**:  
     - 1st: AQ Digit (26,012 units sold)  
     - 2nd: AQ Velocity (25,978 units sold)  
     - 3rd: AQ Aspiron (25,963 units sold)
-
----
-
-## **Database Tables Overview**
-
-The `atliq_hardware_db` database comprises the following key tables:
-
-### **1. `dim_customer`**
-Contains customer-related data, including:
-- **customer_code**: Unique customer identifier.
-- **customer**: Customer name.
-- **platform**: Sales channel (e.g., "E-Commerce", "Brick & Mortar").
-- **channel**: Retail, Direct, or Distributor sales channels.
-- **market**: Customer's country.
-- **region**: Geographic region (APAC, EU, NA, LATAM).
-- **sub_zone**: Further breakdown of regions (India, ANZ, SE, etc.).
-
-### **2. `dim_product`**
-Contains product-related data, including:
-- **product_code**: Unique product identifier.
-- **division**: Product group (P&A, N&S, PC).
-- **segment**: Further breakdown of product types (e.g., Notebook, Desktop).
-- **product**: Product name.
-- **variant**: Product version (e.g., Standard, Plus, Premium).
-
-### **3. `fact_gross_price`**
-Stores gross pricing details:
-- **product_code**: Unique product identifier.
-- **fiscal_year**: Fiscal year the product was sold.
-- **gross_price**: Original selling price before deductions.
-
-### **4. `fact_manufacturing_cost`**
-Contains manufacturing cost data:
-- **product_code**: Unique product identifier.
-- **cost_year**: Year the product was manufactured.
-- **manufacturing_cost**: Total cost to manufacture the product.
-
-### **5. `fact_pre_invoice_deductions`**
-Tracks pre-invoice deduction data:
-- **customer_code**: Unique customer identifier.
-- **fiscal_year**: Year of sale.
-- **pre_invoice_discount_pct**: Pre-invoice discount percentage.
-
-### **6. `fact_sales_monthly`**
-Contains monthly sales data:
-- **date**: Date of sale (monthly format for FY2020-2021).
-- **product_code**: Unique product identifier.
-- **customer_code**: Unique customer identifier.
-- **sold_quantity**: Units sold.
-- **fiscal_year**: Year of sale.
 
 ---
 
